@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | Mustafa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+            <h1 class="logo">كتـــالـــوج</h1>
+            <h1 class="title">Mustafa</h1>
+            <!-- <div class="search">
+                <input type="text" placeholder="ابحث عن منتج....">                
+            </div> -->
+    </header>
+    <main>
+        <!-- animated section -->
+        <section>
+            <div class="animation"></div>
+            <div class="filter"></div>
+        </section>
+        <!-- end animated section -->
+        <!-- cards section -->
+        <section class="cards">
+            <div class="card">
+                <img src="image/result1.jpg.png" alt="">
+                <h2>جوتشي بلوم</h2>
+                <p>عطر زهري منعش مليان حيوية وأنوثة.
+                يناسب أجواء النهار والطلعات الكاجوال.</p>
+                <h1>900 EGP</h1>
+            </div>
+            <div class="card">
+                    <img src="image/result2.jpg.png" alt="">
+                    <h2>شانيل</h2>
+                    <p>برفان أيقوني يعبر عن الأناقة والفخامة
+                    مناسب لكل المناسبات ويمنحك حضور لا يُنسى.</p>
+                    <h1>900 EGP</h1>
+            </div>
+            <div class="card">
+                <img src="image/result3.jpg.png" alt="">
+                <h2>دولتشي آند غابانا</h2>
+                <p>مزيج بين الروائح الشرقية والغربية
+                لكل اللي بيدور على عطر مميز وفريد</p>
+                <h1>900 EGP</h1>
+            </div>
+            <div class="card">
+                <img src="image/result4.jpg.png" alt="">
+                <h2>كولونيا</h2>
+                <p>عطر خفيف ومنعش برائحة عطرية خشبية
+                مناسب للاستعمال اليومي وبيخليك دايمًا متجدد.</p>
+                <h1>900 EGP</h1>
+            </div>
+            <div class="card">
+                <img src="image/result3.jpg.png" alt="">
+                <h2>دولتشي آند غابانا</h2>
+                <p>مزيج بين الروائح الشرقية والغربية
+                لكل اللي بيدور على عطر مميز وفريد</p>
+                <h1>900 EGP</h1>
+            </div>
+            <div class="card">
+                <img src="image/result4.jpg.png" alt="">
+                <h2>كولونيا</h2>
+                <p>عطر خفيف ومنعش برائحة عطرية خشبية
+                مناسب للاستعمال اليومي وبيخليك دايمًا متجدد.</p>
+                <h1>900 EGP</h1>
+            </div>
+            <div class="card">
+                <img src="image/result1.jpg.png" alt="">
+                <h2>جوتشي بلوم</h2>
+                <p>عطر زهري منعش مليان حيوية وأنوثة.
+                يناسب أجواء النهار والطلعات الكاجوال.</p>
+                <h1>900 EGP</h1>
+            </div>
+            <div class="card">
+                    <img src="image/result2.jpg.png" alt="">
+                    <h2>شانيل</h2>
+                    <p>برفان أيقوني يعبر عن الأناقة والفخامة
+                    مناسب لكل المناسبات ويمنحك حضور لا يُنسى.</p>
+                    <h1>900 EGP</h1>
+            </div>
+            <!-- Fullscreen Modal -->
+            <div id="cardModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img id="modalImg" src="" alt="">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                    <h1 id="modalPrice"></h1>
+                </div>
+            </div>
+        </section>
+        <!-- end cards section -->
+    </main>
+    <footer>
+            <div class="end">
+                <div>
+                    <div class="about-us">
+                        <p>متجرنا يقدم احدث صيحات الموضه و العطور الاصليه منذ 2012</p>
+                        <p>اهداء الي عشاق الروائح الجميلة في مصر🤞</p>
+                        <p>متجر البرفان ده مليان بروائح شرقية وغربية تاخدك</p>
+                        <p>في رحلة بين الازهار ةالعود والمسك كل رائحة فيه بتحكي</p>
+                        <p>حكاية من حكايات مصر الجميلة</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="contact-us">
+                        <div class="head-icon-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg>
+                            <h3>تواصل معنا</h3>
+                        </div>
+                        <div class="email-icon-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                            <p>mustafa@google.com</p>
+                        </div>
+                        <div class="phone-icon-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                            <p>01*********</p>
+                        </div>
+                        <p>Site::29.9792'N,31.1343'E</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrights">
+                <h5>Copyrights 2022 ABC. All rights reserved develped by dot IT</h5>
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
