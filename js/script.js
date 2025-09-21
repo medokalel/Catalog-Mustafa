@@ -38,3 +38,27 @@ closeBtn.onclick = () => {
 window.onclick = (e) => {
   if (e.target == modal) modal.style.display = "none";
 };
+
+// Search functionality
+
+
+// استدعاء عناصر البحث والكروت
+const searchInput = document.querySelector(".search input");
+const cards = document.querySelectorAll(".card");
+
+// وظيفة البحث
+searchInput.addEventListener("keyup", function () {
+    const value = this.value.toLowerCase().trim(); // النص اللي المستخدم كتبه
+
+    cards.forEach(card => {
+        const title = card.querySelector("h2").textContent.toLowerCase();
+        const desc = card.querySelector("p").textContent.toLowerCase();
+
+        // لو النص اللي مكتوب موجود في العنوان أو الوصف → خلي الكارت ظاهر
+        if (title.includes(value) || desc.includes(value)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
