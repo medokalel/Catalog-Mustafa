@@ -212,6 +212,15 @@ footer .copyrights h5 {
     header{
         flex-direction: column;
         text-align: center;
+        font-size: 20px;
+    }
+    header .logo {
+        font-size: 24px;
+        margin: 0;
+    }
+    header .title {
+        font-size: 28px;
+        margin: 0;
     }
     header .logo{
         margin-bottom: 0;
@@ -243,6 +252,14 @@ footer .copyrights h5 {
     .cards .card img{
         width: 80%;
         height: 50%;
+    }
+    header .logo {
+        font-size: 24px;
+        margin: 1;
+    }
+    header .title {
+        font-size: 28px;
+        margin: 0;
     }
 }
 
