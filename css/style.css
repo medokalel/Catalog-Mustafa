@@ -51,9 +51,12 @@ header .title{
     min-width: 100%;
     background-image: url('../image/animation1.jpg');
     background-size: cover;
+    background-position: center;
     transition: 0.8s;
     overflow: hidden;
     border-radius: 0px 0px 8px 8px;
+    transition: background-image 1s ease-in-out;
+    margin-bottom: 60px;
 }
 /* end animated section */
 /* cards section */
@@ -62,8 +65,8 @@ main .cards{
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin: 30px 10px;
-}
+    margin: 70px 10px;
+}   
 main .cards .card{
     flex: 1 1 calc(25% - 20px);
     min-width: 400px;
@@ -150,15 +153,6 @@ footer .copyrights h5{
         text-align: center;
         height: auto;
     }
-}
-.animation {
-    width: 100%;
-    background-size: cover;   
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;
-    border-radius: 0 0 8px 8px;
-    margin-bottom: 24px;
 }
 @media (max-width: 768px) {
 .animation {
