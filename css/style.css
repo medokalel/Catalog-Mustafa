@@ -235,7 +235,7 @@ footer .copyrights h5 {
         min-height: 600px;
     }
     .cards .card img{
-        width: 80%;
+        width: 75%;
         height: 50%;
     }
     header .logo {
@@ -253,11 +253,11 @@ footer .copyrights h5 {
     main .cards .card {
         flex: 1 1 calc(50% - 20px);
         min-width: 300px;
-        max-width: 390px;
-        min-height: 600px;
+        max-width: 380px;
+        min-height: 550px;
     }
     .cards .card img{
-        width: 80%;
+        width: 70%;
         max-height: 332px;
     }
     .cards .card p{
@@ -342,11 +342,11 @@ footer .copyrights h5 {
 }
 @media (max-width: 900px) {
     .animation {
-        height: 40vh; /* على التابلت والموبايل */
+        height: 50vh; /* على التابلت والموبايل */
     }
 }
 @media (max-width: 500px) {
     .animation {
-        height: 30vh; /* على الموبايل الصغير */
+        height: 40vh; /* على الموبايل الصغير */
     }
 }
