@@ -337,16 +337,16 @@ footer .copyrights h5 {
 }
 @media (max-width: 1200px) {
     .animation {
-        height: 70vh; /* على التابلت والموبايل */
+        height: 80vh; /* على التابلت والموبايل */
     }
 }
 @media (max-width: 900px) {
     .animation {
-        height: 50vh; /* على التابلت والموبايل */
+        height: 70vh; /* على التابلت والموبايل */
     }
 }
 @media (max-width: 500px) {
     .animation {
-        height: 40vh; /* على الموبايل الصغير */
+        height: 50vh; /* على الموبايل الصغير */
     }
 }
