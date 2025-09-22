@@ -47,22 +47,17 @@ header .title {
 
 /* animated section */
 .animation {
-    min-height: 100vh;
-    min-width: 100%;
+    width: 100%;
+    height: 90vh; /* بدل 100vh علشان تبقى مرنة */
     background-image: url('../image/animation1.jpg');
     background-size: cover;
     background-position: center;
-    transition: 0.8s;
-    overflow: hidden;
-    border-radius: 0px 0px 8px 8px;
-    width: 100%;
-    background-position: center;
     background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;
-    margin-bottom: 24px;
-    transition: background-image 1s ease-in-out;
+    border-radius: 0 0 8px 8px;
     margin-bottom: 60px;
+    transition: background-image 1s ease-in-out;
 }
+
 /* end animated section */
 
 /* cards section */
@@ -109,7 +104,7 @@ main .cards .card{
 main .cards .card:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #131212;
+    background-color: #1c1c1c;
     cursor: pointer;
 }
 /* end cards section */
@@ -140,16 +135,6 @@ footer .copyrights {
 footer .copyrights h5 {
     text-transform: capitalize;
     direction: ltr;
-}
-
-.animation {
-    width: 100%;
-    background-size: cover;   
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;
-    border-radius: 0 0 8px 8px;
-    margin-bottom: 24px;
 }
 .modal {
     display: none;
@@ -348,5 +333,20 @@ footer .copyrights h5 {
     }
     .cards .card h2{
         font-size: 18px;
+    }
+}
+@media (max-width: 1200px) {
+    .animation {
+        height: 70vh; /* على التابلت والموبايل */
+    }
+}
+@media (max-width: 900px) {
+    .animation {
+        height: 40vh; /* على التابلت والموبايل */
+    }
+}
+@media (max-width: 500px) {
+    .animation {
+        height: 30vh; /* على الموبايل الصغير */
     }
 }
