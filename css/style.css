@@ -1,6 +1,4 @@
-/* * {
-    color: #ffffff;
-} */
+
 body {
     font-family: 'Cairo', sans-serif;
     margin: 0;
@@ -365,7 +363,7 @@ footer .copyrights h5 {
     color: rgba(177, 173, 173, 0.685);
     margin: 10px;
 }
-.new-peice{
+.new-price{
     color: #ffc05a;
     font-weight: bold;
 }

@@ -1,10 +1,10 @@
 
-let fristLandingPage = document.querySelector('.animation');
+let firstLandingPage = document.querySelector('.animation');
 let imgArray = ['animation1.jpg', 'animation2.jpg', 'animation3.jpg'];
 function randomizeImgs(){
-        backgroundInterval = setInterval(() => {
+        setInterval(() => {
         let randomNumber = Math.floor(Math.random() * imgArray.length);
-        fristLandingPage.style.backgroundImage = 'url("image/' + imgArray[randomNumber]+'")';
+        firstLandingPage.style.backgroundImage = 'url("image/' + imgArray[randomNumber]+'")';
         }, 5000)
 }
 randomizeImgs();
