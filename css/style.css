@@ -107,6 +107,7 @@ main .cards .card{
     margin-top: 2px;
     margin-right: 20px;
     color: #fdce82;
+    font-size: 28px;
 }
 main .cards .card:hover {
     transform: scale(1.02);
@@ -362,8 +363,9 @@ footer .copyrights h5 {
     text-decoration: line-through;
     color: rgba(177, 173, 173, 0.685);
     margin: 10px;
+    font-size: 24px;
 }
 .new-price{
-    color: #ffc05a;
+    color: #ff7d26;
     font-weight: bold;
 }
