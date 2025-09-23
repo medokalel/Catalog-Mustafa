@@ -1,4 +1,6 @@
-
+.hidden {
+    display: none !important;
+}
 body {
     font-family: 'Cairo', sans-serif;
     margin: 0;
