@@ -35,26 +35,41 @@ window.onclick = (e) => {
   if (e.target == modal) modal.style.display = "none";
 };
 
-// Search functionality
+  // نجيب عناصر البحث والكروت
+  const searchInput = document.querySelector(".search input");
+  const cards = document.querySelectorAll(".card");
 
+  // عنصر لرسالة "المنتج غير متوفر الان"
+  const noResultMsg = document.createElement("p");
+  noResultMsg.textContent = "المنتج غير متوفر الان";
+  noResultMsg.style.textAlign = "center";
+  noResultMsg.style.color = "black";
+  noResultMsg.style.fontWeight = "bolder";
+  noResultMsg.style.fontSize = "20px";
+  noResultMsg.style.display = "none"; // مخفي في البداية
+  document.querySelector(".cards").appendChild(noResultMsg);
 
-// استدعاء عناصر البحث والكروت
-const searchInput = document.querySelector(".search input");
-const cards = document.querySelectorAll(".card");
-
-// وظيفة البحث
-searchInput.addEventListener("keyup", function () {
-    const value = this.value.toLowerCase().trim(); // النص اللي المستخدم كتبه
+  // لما المستخدم يكتب في البحث
+  searchInput.addEventListener("keyup", function() {
+    let query = searchInput.value.toLowerCase(); // النص اللي مكتوب
+    let found = false; // علشان نعرف لو فيه نتيجة ولا لأ
 
     cards.forEach(card => {
-        const title = card.querySelector("h2").textContent.toLowerCase();
-        const desc = card.querySelector("p").textContent.toLowerCase();
+      let title = card.querySelector("h2").textContent.toLowerCase();
+      let description = card.querySelector("p").textContent.toLowerCase();
 
-        // لو النص اللي مكتوب موجود في العنوان أو الوصف → خلي الكارت ظاهر
-        if (title.includes(value) || desc.includes(value)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
+      if (title.includes(query) || description.includes(query)) {
+        card.style.display = "block"; // يظهر
+        found = true;
+      } else {
+        card.style.display = "none"; // يختفي
+      }
     });
-});
+
+    // إظهار أو إخفاء الرسالة حسب النتيجة
+    if (!found && query.trim() !== "") {
+      noResultMsg.style.display = "block";
+    } else {
+      noResultMsg.style.display = "none";
+    }
+  });
