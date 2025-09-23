@@ -120,6 +120,11 @@ main .cards .card:hover {
     background-color: #1c1c1c;
     cursor: pointer;
 }
+
+
+
+
+
 /* end cards section */
 
 /* footer */
@@ -364,12 +369,14 @@ footer .copyrights h5 {
         height: 50vh; /* على الموبايل الصغير */
     }
 }
+/* سعر الخصم */
 .old-price{
     text-decoration: line-through;
     color: rgba(177, 173, 173, 0.685);
     margin: 10px;
     font-size: 24px;
 }
+/* سعر المنتج */
 .new-price{
     color: #ff7d26;
     font-weight: bold;

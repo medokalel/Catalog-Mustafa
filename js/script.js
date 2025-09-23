@@ -144,7 +144,7 @@ const products = [
   },
   {
     name: "Rosado Secret",
-    price: "900 EGP",
+    price: "650 EGP",
     img: "image/319581c8-981a-440f-b561-2fead53fbfe7-removebg-preview.png",
     desc: "استمتعي بجاذبية لا تُقاوم مع عطر Rosado Secret من Fariis Parfum، العطر الذي يجمع بين الرقة والجرأة في لمسة واحدة."
   },
