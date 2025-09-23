@@ -122,6 +122,78 @@ main .cards .card{
     align-items: center;
     padding-right: 7px;
 }
+.card.offer-badge2::after{
+    width: 120px;
+    height: 60px;
+    content: 'خد 2 بسعر   200';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 120px;
+    opacity: 0.8;
+    background-color: yellow;
+    color: red;
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+}
+.card.offer-badge3::after{
+    width: 120px;
+    height: 60px;
+    content: 'خد 2 بسعر 300';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 120px;
+    opacity: 0.8;
+    background-color: yellow;
+    color: red;
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+}
+.card.offer-badge4::after{
+    width: 120px;
+    height: 60px;
+    content: 'خد 3  + 1هديه';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 120px;
+    opacity: 0.8;
+    background-color: yellow;
+    color: red;
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+}
+.card.offer-badge5::after{
+    width: 120px;
+    height: 60px;
+    content: 'خد 2 بسعر 400';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 120px;
+    opacity: 0.8;
+    background-color: yellow;
+    color: red;
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+}
 .cards .card img {
     display: inline-block;
     width: 90%;

@@ -245,7 +245,7 @@ const products = [
   },
   {
     name:"Emilia Khamra",
-    price:"EGP 110",
+    offerBadge2:true,
     img:"image/9efb07df-8a74-4d89-b768-69b745b8e1bc-removebg-preview.png",
     desc:"Emilia Khamra بتركيبته الغنية يقدم مزيجًا آسرًا من النفحات الشرقية العميقة واللمسات العطرية الراقية التي تضيف لمسة من السحر لكل لحظة.",
   },
@@ -263,6 +263,7 @@ const products = [
   },
   {
     name:"Lelio",
+    offerBadge4:true,
     price:"EGP 90",
     img:"image/e8e94e2a-2c7a-459d-b29d-eab066a218b8-removebg-preview.png",
     desc:"عايزة شعر يلمع وريحة جسم تاخد العقل جربي Lelio بريقة الدهبي بزبدة الشيا",
@@ -270,6 +271,7 @@ const products = [
   {
     name:"عطر الأبيض",
     offer:true,
+    offerBadge5:true,
     oldPrice:"EGP 250",
     price:"EGP 230",
     img:"image/8b2a91b8-3e46-4750-9548-3e08c09b5c0d-removebg-preview.png",
@@ -278,6 +280,7 @@ const products = [
   {
     name:"خالص عودي",
     offer:true,
+    offerBadge5:true,
     oldPrice:"EGP 250",
     price:"EGP 230",
     img:"image/8cb4180a-a461-43a8-8283-05e47ad5a737-removebg-preview.png",
@@ -286,6 +289,7 @@ const products = [
   {
     name:"ليل ملكي",
     offer:true,
+    offerBadge5:true,
     oldPrice:"EGP 250",
     price:"EGP 230",
     img:"image/38b80cd8-70dd-48f2-ba8d-16c410738d59-removebg-preview.png",
@@ -294,6 +298,7 @@ const products = [
   {
     name:"عطر رغبة خصوص",
     offer:true,
+    offerBadge5:true,
     oldPrice:"EGP 250",
     price:"EGP 230",
     img:"image/91fef360-adfc-464b-9262-dbd394c7099d-removebg-preview.png",
@@ -302,6 +307,7 @@ const products = [
   {
     name:"عطر عودي معادي",
     offer:true,
+    offerBadge5:true,
     oldPrice:"EGP 250",
     price:"EGP 230",
     img:"image/f2fe0549-aff3-4e15-a119-63383e7c9686-removebg-preview.png",
@@ -310,6 +316,7 @@ const products = [
   {
     name:"عروق العود",
     offer:true,
+    offerBadge5:true,
     oldPrice:"EGP 250",
     price:"EGP 230",
     img:"image/66038a84-8685-496b-9a9f-9765118e5c20-removebg-preview.png",
@@ -317,42 +324,49 @@ const products = [
   },
   {
     name:"مسك الرمان",
+    offerBadge3:true,
     price:"EGP 175",
     img:"image/4abe8685-113f-44a9-b545-18982b72b08f-removebg-preview.png",
     desc:"عطر مميز بروح أنثوية جذابة يجمع بين نعومة المسك وحلاوة الرمان في مزيج آسر يلامس الحواس.",
   },
   {
     name:"مسك روحي",
+    offerBadge3:true,
     price:"EGP 175",
     img:"image/4adcab0b-2cde-4916-b5ca-15411cff2a24-removebg-preview.png",
     desc:"عطر ساحر يجمع بين أناقة المسك ورقة الروائح الشرقية في توليفة تنبض بالهدوء والصفاء.",
   },
   {
     name:"مسك عمري",
+    offerBadge3:true,
     price:"",
     img:"image/381bcca7-bd19-4ce0-b8a8-361f1abbf690-removebg-preview.png",
     desc:"عطر فاخر ينبض بالرقي والجاذبية، يجمع بين نعومة المسك ولمسات شرقية دافئة تمنحك حضورًا لا يُنسى.",
   },
   {
     name:"مسك حياتي",
+    offerBadge3:true,
     price:"EGP 175",
     img:"image/852fbb52-e5af-4b43-ba07-deed8f07d38f-removebg-preview.png",
     desc:"عطر أنيق يمنحك انتعاشًا مميزًا ولمسة من الفخامة بفضل مزيجه الراقي من المسك النقي مع نفحات عطرية منعشة.",
   },
   {
     name:"مسك التوت",
+    offerBadge3:true,
     price:"EGP 175",
     img:"image/5923d849-629d-4d8e-9ed4-977119f45c1b-removebg-preview.png",
     desc:"عطر منعش ممزوج بلمسة التوت الأحمر، يمنحك إحساس بالفخامة والانتعاش، بخلاصة مسك نقي خالٍ من الكحول، ثبات يدوم طويلًا.",
   },
   {
     name:"مسك فانيليا",
+    offerBadge3:true,
     price:"EGP 175",
     img:"image/161193a9-62f8-4708-99a1-5f6fe0904da6-removebg-preview.png",
     desc:"عطر دافئ يجمع بين رائحة المسك النقي مع لمسة الفانيليا الحلوة، ليمنحك إحساس بالنعومة والفخامة في كل لحظة. خالٍ من الكحول مع ثبات يدوم طويلًا.",
   },
   {
     name:"مسك بودر",
+    offerBadge3:true,
     price:"EGP 175",
     img:"image/d73b0b4a-fd04-4ec8-9fe3-1c5fa97b2d6c-removebg-preview.png",
     desc:"عطر ناعم يجمع بين رائحة المسك النقي مع لمسة البودرة المخملية، ليمنحك إحساس بالنظافة والانتعاش يدوم طوال اليوم. خالٍ من الكحول وثبات عالي.",
@@ -377,6 +391,18 @@ products.forEach(p => {
   }
   if (p.offerBadge) {
     card.classList.add("offer-badge");
+  }
+  if (p.offerBadge2) {
+    card.classList.add("offer-badge2");
+  }
+  if (p.offerBadge3) {
+    card.classList.add("offer-badge3");
+  }
+  if (p.offerBadge4) {
+    card.classList.add("offer-badge4");
+  }
+  if (p.offerBadge5) {
+    card.classList.add("offer-badge5");
   }
   
   card.innerHTML = `
