@@ -19,8 +19,8 @@ const products = [
   },
   {
     name: "BLISS IN RED",
+    oldPrice: " 1100 EGP",
     price: "750 EGP",
-    oldPrice: "1100 EGP",
     img: "image/1206e68c-d96b-4740-9b6b-e8fbc5f52c04-removebg-preview.png",
     desc: "عطر أنثوي فخم يعكس الجاذبية والنعومة في نفس الوقت. زجاجته الأنيقة بلون ذهبي مع لمسة حمراءبتجسد شخصية العطر: أنوثة، رومانسية، وقوة هادية."
   },
@@ -182,7 +182,10 @@ products.forEach(p => {
       <h2>${p.name}</h2>
       <p>${p.desc}</p>
     </div>
-    <h1>${p.price} ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}</h1>
+    <h1>
+      ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}
+      <span>${p.price}</span>
+      </h1>
   `;
 
   cardsContainer.appendChild(card);
