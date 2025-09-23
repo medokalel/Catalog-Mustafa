@@ -13,7 +13,6 @@ randomizeImgs();
 const products = [
   {
     name: "Si",
-    offer: false,
     price: "250 EGP",
     img: "image/si-removebg-preview.png",
     desc: "تركيبته فيها مزيج من الكاسيس (عنب الثعلب الأسود) في البداية، مع قلب فيه زهور مثل .... الفريزيا والوردة الدمشقية، والقاعدة بتكون من الفانيليا، الباتشولي، الأخشاب والمسك."
@@ -28,6 +27,7 @@ const products = [
   },
   {
     name: "Sergeant Elixir",
+    offer: true,
     oldPrice:"1100 EGP",
     price: "700 EGP",
     img: "image/0f99614c-5a58-47ca-ac1d-e3dbf9482115-removebg-preview.png",
@@ -35,6 +35,7 @@ const products = [
   },
   {
     name: "Courageous Pour Homme",
+    offer: true,
     oldPrice:"1100 EGP",
     price: "700 EGP",
     img: "image/02aaa367-3b02-4421-ad3a-9b382445cafc-removebg-preview.png",
@@ -42,6 +43,7 @@ const products = [
   },
   {
     name: "Fleur Explosion",
+    offer: true,
     oldPrice:"1100 EGP",
     price: "700 EGP",
     img: "image/8ebc959f-9962-4e60-a94b-fc6b66ea8199-removebg-preview.png",
@@ -73,6 +75,7 @@ const products = [
   },
   {
     name: "شيخ العرب",
+    offer: true,
     oldPrice:"300 EGP",
     price: "250 EGP",
     img: "image/شيخ_العرب-removebg-preview.png",
