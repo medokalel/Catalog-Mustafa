@@ -144,6 +144,7 @@ footer .copyrights {
 footer .copyrights h5 {
     text-transform: capitalize;
     direction: ltr;
+    color: white;
 }
 .modal {
     display: none;
