@@ -13,7 +13,6 @@ let modal = document.getElementById("cardModal");
 let modalImg = document.getElementById("modalImg");
 let modalTitle = document.getElementById("modalTitle");
 let modalDesc = document.getElementById("modalDesc");
-let modalPrice = document.getElementById("modalPrice");
 let closeBtn = document.querySelector(".modal .close");
 // Add click event to each card
 document.querySelectorAll(".card").forEach(card => {
@@ -21,13 +20,10 @@ document.querySelectorAll(".card").forEach(card => {
     let img = card.querySelector("img").src;
     let title = card.querySelector("h2").textContent;
     let desc = card.querySelector("p").textContent;
-    let price = card.querySelector("h1").textContent;
 
     modalImg.src = img;
     modalTitle.textContent = title;
     modalDesc.textContent = desc;
-    modalPrice.textContent = price;
-
     modal.style.display = "flex";
   });
 });
