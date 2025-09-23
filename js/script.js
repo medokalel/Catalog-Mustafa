@@ -13,12 +13,14 @@ randomizeImgs();
 const products = [
   {
     name: "Si",
+    offer: false,
     price: "250 EGP",
     img: "image/si-removebg-preview.png",
     desc: "تركيبته فيها مزيج من الكاسيس (عنب الثعلب الأسود) في البداية، مع قلب فيه زهور مثل .... الفريزيا والوردة الدمشقية، والقاعدة بتكون من الفانيليا، الباتشولي، الأخشاب والمسك."
   },
   {
     name: "BLISS IN RED",
+    offer: true,
     oldPrice: " 1100 EGP",
     price: "750 EGP",
     img: "image/1206e68c-d96b-4740-9b6b-e8fbc5f52c04-removebg-preview.png",
@@ -26,36 +28,42 @@ const products = [
   },
   {
     name: "Sergeant Elixir",
+    offer: false,
     price: "900 EGP",
     img: "image/0f99614c-5a58-47ca-ac1d-e3dbf9482115-removebg-preview.png",
     desc: "عطر رجالي قوي وفخم من دار Fariis Parfum، مصمم ليجمع بين الطابع العصري والهيبة الكلاسيكية. العطر مستوحى من الروح الجذابة لعطر Dior Sauvage Elixir، لكنه بيقدّم نفس الأجواء بلمسة مختلفة وسعر مناسب."
   },
   {
     name: "Courageous Pour Homme",
+    offer: false,
     price: "900 EGP",
     img: "image/02aaa367-3b02-4421-ad3a-9b382445cafc-removebg-preview.png",
     desc: "عطر رجالي فخم من Fariis Parfum، مصمم للرجل الجريء الواثق اللي بيعرف يفرض حضوره. زجاجته الكهرمانية مع الغطاء المعدني تعكس شخصية العطر: قوة وأناقة في نفس الوقت."
   },
   {
     name: "Fleur Explosion",
+    offer: false,
     price: "900 EGP",
     img: "image/8ebc959f-9962-4e60-a94b-fc6b66ea8199-removebg-preview.png",
     desc: "عطر أنثوي راقي اسمه بيعبر عنه تمامًا: انفجار من الزهور المبهجة. زجاجته الوردية المزينة بشريط أسود أنيق بتجسد شخصية العطر: رقة، أنوثة، وحيوية."
   },
   {
     name: "Bold Beast",
+    offer: false,
     price: "900 EGP",
     img: "image/637c1d44-f9b2-4651-bbc5-7b08d3f6efcf-removebg-preview.png",
     desc: "عطر رجالي جريء بيعكس القوة والهيبة في زجاجة واحدة. تصميمه الأسود مع اللمسات الذهبية بيجسد شخصية العطر: فخامة، رجولة، وثقة لا متناهية."
   },
   {
     name: "Black Onyx",
+    offer: true,
     price: "1,200 EGP",
     img: "image/b8d54f9d-7ad1-4568-9dc7-c05de91d136a-removebg-preview.png",
     desc: "عطر فاخر يجمع بين الغموض والجاذبية. اسمه مستوحى من حجر العقيق الأسود المعروف بالقوة والهيبة، وزجاجته اللامعة السوداء بتجسد فخامة وأناقة لا مثيل لها."
   },
   {
     name: "Vibes",
+    offer:true,
     price: "950 EGP",
     img: "image/b2329e24-c52e-4f9c-bd5b-fe60d33e18b0-removebg-preview.png",
     desc: "عطر رجالي عصري بيمثل الطاقة الإيجابية والجاذبية في زجاجة واحدة. تصميمه الأنيق باللون الأسودالمتدرج يعكس شخصية العطر: قوة، بساطة، وأناقة شبابية."
@@ -176,6 +184,11 @@ products.forEach(p => {
   const card = document.createElement("div");
   card.classList.add("card");
 
+  // هنا الشرط
+  if (p.offer) {
+    card.classList.add("offer");
+  }
+
   card.innerHTML = `
     <img src="${p.img}" alt="${p.name}">
     <div>
@@ -185,11 +198,12 @@ products.forEach(p => {
     <h1>
       ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}
       <span>${p.price}</span>
-      </h1>
+    </h1>
   `;
 
   cardsContainer.appendChild(card);
 });
+
 
   // نجيب عناصر البحث والكروت
   const searchInput = document.querySelector(".search input");
