@@ -339,7 +339,7 @@ const products = [
   {
     name:"مسك عمري",
     offerBadge3:true,
-    price:"",
+    price:"EGP 175",
     img:"image/381bcca7-bd19-4ce0-b8a8-361f1abbf690-removebg-preview.png",
     desc:"عطر فاخر ينبض بالرقي والجاذبية، يجمع بين نعومة المسك ولمسات شرقية دافئة تمنحك حضورًا لا يُنسى.",
   },
@@ -373,7 +373,7 @@ const products = [
   },
   {
     name:"Burberry Her Eau de Parfum",
-    price:"250",
+    price:"EGP 250",
     img:"image/f2aebaec-e4bc-4185-a440-31fe0d48c9bc-removebg-preview.png",
     desc:"عطر أنثوي فاخر يجمع بين نضارة الفواكه الحمراء مثل التوت والفراولة والكشمش الأسود، مع قلب من الياسمين والبنفسج، وقاعدة دافئة من المسك والعنبر. يمنحك لمسة من الجاذبية والأنوثة التي تدوم طويلًا.",
   }
