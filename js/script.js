@@ -57,12 +57,14 @@ const products = [
   },
   {
     name: "Black Onyx",
+    offerBadge: true,
     price: "700 EGP",
     img: "image/b8d54f9d-7ad1-4568-9dc7-c05de91d136a-removebg-preview.png",
     desc: "عطر فاخر يجمع بين الغموض والجاذبية. اسمه مستوحى من حجر العقيق الأسود المعروف بالقوة والهيبة، وزجاجته اللامعة السوداء بتجسد فخامة وأناقة لا مثيل لها."
   },
   {
     name: "Vibes",
+    offerBadge: true,
     price: "700 EGP",
     img: "image/b2329e24-c52e-4f9c-bd5b-fe60d33e18b0-removebg-preview.png",
     desc: "عطر رجالي عصري بيمثل الطاقة الإيجابية والجاذبية في زجاجة واحدة. تصميمه الأنيق باللون الأسودالمتدرج يعكس شخصية العطر: قوة، بساطة، وأناقة شبابية."
@@ -189,7 +191,10 @@ products.forEach(p => {
   if (p.offer) {
     card.classList.add("offer");
   }
-
+  if (p.offerBadge) {
+    card.classList.add("offer-badge");
+  }
+  
   card.innerHTML = `
     <img src="${p.img}" alt="${p.name}">
     <div>
@@ -199,6 +204,7 @@ products.forEach(p => {
     <h1>
       ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}
       <span>${p.price}</span>
+      
     </h1>
   `;
 

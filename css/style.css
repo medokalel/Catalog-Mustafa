@@ -104,6 +104,24 @@ main .cards .card{
     justify-content: center;
     align-items: center;
 }
+.card.offer-badge::after{
+    width: 120px;
+    height: 60px;
+    content: 'خد 2 بسعر 1200';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 120px;
+    opacity: 0.8;
+    background-color: yellow;
+    color: red;
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 7px;
+}
 .cards .card img {
     display: inline-block;
     width: 90%;
@@ -132,6 +150,7 @@ main .cards .card{
     color: #fdce82;
     font-size: 28px;
 }
+
 main .cards .card:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
