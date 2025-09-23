@@ -8,73 +8,8 @@ function randomizeImgs(){
         }, 5000)
 }
 randomizeImgs();
-// Get modal elements
-let modal = document.getElementById("cardModal");
-let modalImg = document.getElementById("modalImg");
-let modalTitle = document.getElementById("modalTitle");
-let modalDesc = document.getElementById("modalDesc");
-let closeBtn = document.querySelector(".modal .close");
-// Add click event to each card
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
-    let img = card.querySelector("img").src;
-    let title = card.querySelector("h2").textContent;
-    let desc = card.querySelector("p").textContent;
 
-    modalImg.src = img;
-    modalTitle.textContent = title;
-    modalDesc.textContent = desc;
-    modal.style.display = "flex";
-  });
-});
-// Close modal
-closeBtn.onclick = () => {
-  modal.style.display = "none";
-};
-window.onclick = (e) => {
-  if (e.target == modal) modal.style.display = "none";
-};
-
-  // نجيب عناصر البحث والكروت
-  const searchInput = document.querySelector(".search input");
-  const cards = document.querySelectorAll(".card");
-
-  // عنصر لرسالة "المنتج غير متوفر الان"
-  const noResultMsg = document.createElement("p");
-  noResultMsg.textContent = "المنتج غير متوفر الان";
-  noResultMsg.style.textAlign = "center";
-  noResultMsg.style.color = "black";
-  noResultMsg.style.fontWeight = "bolder";
-  noResultMsg.style.fontSize = "20px";
-  noResultMsg.style.display = "none"; // مخفي في البداية
-  document.querySelector(".cards").appendChild(noResultMsg);
-
-// البحث في المنتجات
-searchInput.addEventListener("keyup", function() {
-  let query = searchInput.value.toLowerCase(); // النص اللي مكتوب
-  let found = false; // علشان نعرف لو فيه نتيجة ولا لأ
-
-  cards.forEach(card => {
-    let title = card.querySelector("h2").textContent.toLowerCase();
-    let description = card.querySelector("p").textContent.toLowerCase();
-
-    if (title.includes(query) || description.includes(query)) {
-      card.classList.remove("hidden"); // يظهر
-      found = true;
-    } else {
-      card.classList.add("hidden"); // يختفي
-    }
-  });
-
-  // إظهار أو إخفاء الرسالة حسب النتيجة
-  if (!found && query.trim() !== "") {
-    noResultMsg.style.display = "block";
-  } else {
-    noResultMsg.style.display = "none";
-  }
-});
-
-// اضافه المنتاجات الجديده
+// اضافه المنتاجات
 const products = [
   {
     name: "Si",
@@ -86,13 +21,13 @@ const products = [
     name: "BLISS IN RED",
     price: "750 EGP",
     oldPrice: "1100 EGP",
-    img: "image/1206e68c-d96b-44d7-a5b1-95938e14cc72-removebg-preview.png",
+    img: "image/1206e68c-d96b-4740-9b6b-e8fbc5f52c04-removebg-preview.png",
     desc: "عطر أنثوي فخم يعكس الجاذبية والنعومة في نفس الوقت. زجاجته الأنيقة بلون ذهبي مع لمسة حمراءبتجسد شخصية العطر: أنوثة، رومانسية، وقوة هادية."
   },
   {
     name: "Sergeant Elixir",
     price: "900 EGP",
-    img: "image/0f99614c-5a58-4585-b8ce-97c415bb8499-removebg-preview.png",
+    img: "image/0f99614c-5a58-47ca-ac1d-e3dbf9482115-removebg-preview.png",
     desc: "عطر رجالي قوي وفخم من دار Fariis Parfum، مصمم ليجمع بين الطابع العصري والهيبة الكلاسيكية. العطر مستوحى من الروح الجذابة لعطر Dior Sauvage Elixir، لكنه بيقدّم نفس الأجواء بلمسة مختلفة وسعر مناسب."
   },
   {
@@ -235,3 +170,87 @@ const products = [
   }
 ];
 
+const cardsContainer = document.getElementById("cards");
+
+products.forEach(p => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  card.innerHTML = `
+    <img src="${p.img}" alt="${p.name}">
+    <div>
+      <h2>${p.name}</h2>
+      <p>${p.desc}</p>
+    </div>
+    <h1>${p.price} ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}</h1>
+  `;
+
+  cardsContainer.appendChild(card);
+});
+
+  // نجيب عناصر البحث والكروت
+  const searchInput = document.querySelector(".search input");
+  const cards = document.querySelectorAll(".card");
+
+  // عنصر لرسالة "المنتج غير متوفر الان"
+  const noResultMsg = document.createElement("p");
+  noResultMsg.textContent = "المنتج غير متوفر الان";
+  noResultMsg.style.textAlign = "center";
+  noResultMsg.style.color = "black";
+  noResultMsg.style.fontWeight = "bolder";
+  noResultMsg.style.fontSize = "20px";
+  noResultMsg.style.display = "none"; // مخفي في البداية
+  document.querySelector(".cards").appendChild(noResultMsg);
+
+// البحث في المنتجات
+searchInput.addEventListener("keyup", function() {
+  let query = searchInput.value.toLowerCase(); // النص اللي مكتوب
+  let found = false; // علشان نعرف لو فيه نتيجة ولا لأ
+
+  cards.forEach(card => {
+    let title = card.querySelector("h2").textContent.toLowerCase();
+    let description = card.querySelector("p").textContent.toLowerCase();
+
+    if (title.includes(query) || description.includes(query)) {
+      card.classList.remove("hidden"); // يظهر
+      found = true;
+    } else {
+      card.classList.add("hidden"); // يختفي
+    }
+  });
+
+  // إظهار أو إخفاء الرسالة حسب النتيجة
+  if (!found && query.trim() !== "") {
+    noResultMsg.style.display = "block";
+  } else {
+    noResultMsg.style.display = "none";
+  }
+});
+
+
+// Get modal elements
+let modal = document.getElementById("cardModal");
+let modalImg = document.getElementById("modalImg");
+let modalTitle = document.getElementById("modalTitle");
+let modalDesc = document.getElementById("modalDesc");
+let closeBtn = document.querySelector(".modal .close");
+// Add click event to each card
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    let img = card.querySelector("img").src;
+    let title = card.querySelector("h2").textContent;
+    let desc = card.querySelector("p").textContent;
+
+    modalImg.src = img;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modal.style.display = "flex";
+  });
+});
+// Close modal
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+};
+window.onclick = (e) => {
+  if (e.target == modal) modal.style.display = "none";
+};
