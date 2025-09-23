@@ -196,7 +196,7 @@ products.forEach(p => {
   }
   
   card.innerHTML = `
-    <img src="${p.img}" alt="${p.name}">
+    <img src="${p.img}" loading="lazy" alt="${p.name}">
     <div>
       <h2>${p.name}</h2>
       <p>${p.desc}</p>
