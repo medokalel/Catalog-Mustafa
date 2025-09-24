@@ -246,6 +246,7 @@ const products = [
   {
     name:"Emilia Khamra",
     offerBadge2:true,
+    price:"EGP 110",
     img:"image/9efb07df-8a74-4d89-b768-69b745b8e1bc-removebg-preview.png",
     desc:"Emilia Khamra بتركيبته الغنية يقدم مزيجًا آسرًا من النفحات الشرقية العميقة واللمسات العطرية الراقية التي تضيف لمسة من السحر لكل لحظة.",
   },
@@ -420,8 +421,7 @@ products.forEach(p => {
       <div class="card-contact">
       <h1>
         ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}
-        <span>${p.price}</span>
-        
+        ${p.oldPrice ? `<span class="new-price">${p.price}</span>` : `<span>${p.price}</span>`}
       </h1>
       <h4><a href="https://wa.me/+2001205056687?text=اهلا%20عايز%20استفسر%20عن%20منتج" target="_blank">تواصل معنا</a></h4>
     </div>

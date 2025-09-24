@@ -76,7 +76,7 @@ main .cards {
 }
 main .cards .card{
     position: relative;
-    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 250px;
     min-width: 400px;
     max-width: 400px;
     height: 570px;
@@ -198,7 +198,8 @@ main .cards .card{
 .cards .card img {
     display: inline-block;
     width: 90%;
-    height: 59%;
+    max-height: 340px;
+    min-height: 340px;
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -225,13 +226,15 @@ main .cards .card{
 .card-contact{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 10px;
 }
 .card-contact h4 a{
     color: green;
+    margin-left: 12px;
 }
-main .cards .card:hover img{
-    transform: scale(1.02);
+main .cards .card img:hover{
+    transform: scale(1.01);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: #1c1c1c23;
     cursor: pointer;
