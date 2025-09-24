@@ -224,7 +224,7 @@ main .cards .card{
     font-size: 28px;
 }
 
-main .cards .card:hover {
+main .cards .card:hover img  {
     transform: scale(1.02);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: #1c1c1c;
