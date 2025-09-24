@@ -219,21 +219,23 @@ main .cards .card{
     display: flex;
     align-items: center;
     margin-top: 2px;
-    margin-right: 20px;
     color: #fdce82;
-    font-size: 28px;
+    font-size: 24px;
 }
-
-main .cards .card:hover img  {
+.card-contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.card-contact h4 a{
+    color: green;
+}
+main .cards .card:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: #1c1c1c;
     cursor: pointer;
 }
-
-
-
-
 
 /* end cards section */
 
@@ -484,7 +486,7 @@ footer .copyrights h5 {
     text-decoration: line-through;
     color: rgba(177, 173, 173, 0.685);
     margin: 10px;
-    font-size: 24px;
+    font-size: 22px;
 }
 /* سعر المنتج */
 .new-price{

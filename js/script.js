@@ -416,12 +416,15 @@ products.forEach(p => {
     <div>
       <h2>${p.name}</h2>
       <p>${p.desc}</p>
+      </div>
+      <div class="card-contact">
+      <h1>
+        ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}
+        <span>${p.price}</span>
+        
+      </h1>
+      <h4><a href="https://wa.me/+2001205056687?text=اهلا%20عايز%20استفسر%20عن%20منتج" target="_blank">تواصل معنا</a></h4>
     </div>
-    <h1>
-      ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ""}
-      <span>${p.price}</span>
-      
-    </h1>
   `;
 
   cardsContainer.appendChild(card);
@@ -467,30 +470,48 @@ searchInput.addEventListener("keyup", function() {
   }
 });
 
-
 // Get modal elements
-let modal = document.getElementById("cardModal");
-let modalImg = document.getElementById("modalImg");
-let modalTitle = document.getElementById("modalTitle");
-let modalDesc = document.getElementById("modalDesc");
-let closeBtn = document.querySelector(".modal .close");
-// Add click event to each card
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
-    let img = card.querySelector("img").src;
-    let title = card.querySelector("h2").textContent;
-    let desc = card.querySelector("p").textContent;
+const modal = document.getElementById("cardModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const closeBtn = document.querySelector(".modal .close");
+
+// Use event delegation on the cards container so clicks are handled reliably
+const cardsContainers = document.getElementById("cards");
+
+cardsContainers.addEventListener("click", (e) => {
+  // find the nearest card ancestor of the clicked element
+  const card = e.target.closest(".card");
+  if (!card) return; // لو ما ضغطش جوا كرت
+
+  // لو كان الضغط داخل لينك (مثلاً زر واتساب) متفتحش المودال
+  if (e.target.closest("a")) return;
+
+  // نتحقق إذا اللى اتضغط كان صورة أو الفقرة (الوصف) أو العنوان (h2)
+  const clickedImg = e.target.closest("img");
+  const clickedP = e.target.closest("p");
+  const clickedTitle = e.target.closest("h2");
+
+  if (clickedImg || clickedP || clickedTitle) {
+    const img = card.querySelector("img").src;
+    const title = card.querySelector("h2").textContent;
+    const desc = card.querySelector("p").textContent;
 
     modalImg.src = img;
     modalTitle.textContent = title;
     modalDesc.textContent = desc;
     modal.style.display = "flex";
-  });
+  }
 });
-// Close modal
-closeBtn.onclick = () => {
+
+// Close modal (زر الإغلاق، الضغط خارج المودال، أو زر Escape)
+closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
-};
-window.onclick = (e) => {
-  if (e.target == modal) modal.style.display = "none";
-};
+});
+window.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") modal.style.display = "none";
+});
